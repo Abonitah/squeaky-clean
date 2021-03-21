@@ -27,14 +27,20 @@ app.get('/createOrder', (req, res) => {
     res.render('createOrder', {title: 'Create Order'});
 })
 
+app.get('/login', (req, res) => { 
+    res.render('login', {title: 'Login'});
+})
 
+app.get('/registration', (req, res) => { 
+    res.render('registration', {title: 'Register'});
+})
 app.post('/createEmployee', (req,res)=>{
     console.log(req.body)
     res.send("Data successfully captured") 
 })
 
 app.get('*', (req, res)=> {
-    res.send('The route specified doesnt exist')
+    res.send('squeaky clean')
 })
   
 //Server 
